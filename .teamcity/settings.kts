@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.dockerRegistry
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
 /*
@@ -34,6 +35,16 @@ project {
     buildType(ConfigFromTemplate)
 
     template(ConfigTeamplate)
+
+    features {
+        dockerRegistry {
+            id = "PROJECT_EXT_2"
+            name = "Docker Registry"
+            url = "https://docker.io"
+            userName = "asd"
+            password = "credentialsJSON:aa66e271-6324-4c92-ac1c-23391bab0ecb"
+        }
+    }
 }
 
 object ConfigFromTemplate : BuildType({
