@@ -29,6 +29,7 @@ version = "2020.1"
 project {
 
     vcsRoot(Vcsroottemplate)
+    vcsRoot(Hdhdhdgdghdgh)
     vcsRoot(VcsRootWithPasswordWithoutCustomEnc)
 
     buildType(TestConfigDefaultEncription)
@@ -55,6 +56,10 @@ object ConfigFromTemplate : BuildType({
         password("fg", "credentialsJSON:c3c7b7c7-4b19-4878-8409-1d7b7c218093")
         password("parNewEnc", "credentialsJSON:fa4d8cf5-2afb-4a23-b8de-5e40df9670b1")
     }
+
+    vcs {
+        root(Hdhdhdgdghdgh)
+    }
 })
 
 object TestConfigDefaultEncription : BuildType({
@@ -70,6 +75,15 @@ object ConfigTeamplate : Template({
 
     vcs {
         root(Vcsroottemplate)
+    }
+})
+
+object Hdhdhdgdghdgh : GitVcsRoot({
+    name = "hdhdhdgdghdgh"
+    url = "afdadf"
+    authMethod = password {
+        userName = "fgdfg"
+        password = "credentialsJSON:2e94afa4-daf7-44e2-9997-9dd00c42bca0"
     }
 })
 
