@@ -52,6 +52,7 @@ object ConfigFromTemplate : BuildType({
     name = "configFromTemplate"
 
     params {
+        password("fg", "credentialsJSON:c3c7b7c7-4b19-4878-8409-1d7b7c218093")
         password("parNewEnc", "credentialsJSON:fa4d8cf5-2afb-4a23-b8de-5e40df9670b1")
     }
 })
