@@ -31,9 +31,15 @@ project {
     vcsRoot(VcsRootWithPasswordWithoutCustomEnc)
 
     buildType(TestConfigDefaultEncription)
+    buildType(ConfigFromTemplate)
 
     template(ConfigTeamplate)
 }
+
+object ConfigFromTemplate : BuildType({
+    templates(ConfigTeamplate)
+    name = "configFromTemplate"
+})
 
 object TestConfigDefaultEncription : BuildType({
     name = "test config default encription"
