@@ -27,6 +27,7 @@ version = "2020.1"
 
 project {
 
+    vcsRoot(Vcsroottemplate)
     vcsRoot(VcsRootWithPasswordWithoutCustomEnc)
 
     buildType(TestConfigDefaultEncription)
@@ -44,6 +45,10 @@ object TestConfigDefaultEncription : BuildType({
 
 object ConfigTeamplate : Template({
     name = "configTeamplate"
+
+    vcs {
+        root(Vcsroottemplate)
+    }
 })
 
 object VcsRootWithPasswordWithoutCustomEnc : GitVcsRoot({
@@ -52,5 +57,14 @@ object VcsRootWithPasswordWithoutCustomEnc : GitVcsRoot({
     authMethod = password {
         userName = "user_nocustom"
         password = "credentialsJSON:d1b36129-1a23-417e-9f45-b64954422b07"
+    }
+})
+
+object Vcsroottemplate : GitVcsRoot({
+    name = "vcsroottemplate"
+    url = "https://sdfkjlskdfj"
+    authMethod = password {
+        userName = "blablaba"
+        password = "credentialsJSON:94dc7066-2533-4dff-bdac-d73984821d04"
     }
 })
