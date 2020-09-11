@@ -39,6 +39,10 @@ project {
 object ConfigFromTemplate : BuildType({
     templates(ConfigTeamplate)
     name = "configFromTemplate"
+
+    params {
+        password("parNewEnc", "credentialsJSON:fa4d8cf5-2afb-4a23-b8de-5e40df9670b1")
+    }
 })
 
 object TestConfigDefaultEncription : BuildType({
