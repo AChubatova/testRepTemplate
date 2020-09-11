@@ -30,6 +30,8 @@ project {
     vcsRoot(VcsRootWithPasswordWithoutCustomEnc)
 
     buildType(TestConfigDefaultEncription)
+
+    template(ConfigTeamplate)
 }
 
 object TestConfigDefaultEncription : BuildType({
@@ -38,6 +40,10 @@ object TestConfigDefaultEncription : BuildType({
     vcs {
         root(VcsRootWithPasswordWithoutCustomEnc)
     }
+})
+
+object ConfigTeamplate : Template({
+    name = "configTeamplate"
 })
 
 object VcsRootWithPasswordWithoutCustomEnc : GitVcsRoot({
