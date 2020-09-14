@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.dockerECRRegistry
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.dockerRegistry
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
@@ -44,6 +45,17 @@ project {
             url = "https://docker.io"
             userName = "asd"
             password = "credentialsJSON:aa66e271-6324-4c92-ac1c-23391bab0ecb"
+        }
+        dockerECRRegistry {
+            id = "PROJECT_EXT_3"
+            displayName = "Amazon ECR connection"
+            registryId = "913206223978"
+            credentialsProvider = accessKey {
+                accessKeyId = "AKIA5JH2VERVHVMPJQJI"
+                secretAccessKey = "credentialsJSON:e6886fb2-01ab-4459-b001-d5c6cc9655b3"
+            }
+            regionCode = "eu-central-1"
+            credentialsType = accessKeys()
         }
     }
 }
